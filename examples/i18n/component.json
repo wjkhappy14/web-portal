@@ -1,0 +1,67 @@
+[
+  {
+    "demo-block": {
+      "button-text": "在线运行",
+      "hide-text": "隐藏代码",
+      "show-text": "显示代码",
+      "tooltip-text": "前往 codepen.io 运行此示例"
+    },
+    "footer": {
+      "changelog": "资源中心",
+      "community": "AA",
+      "contribution": "合作伙伴",
+      "eleme": "活动中心",
+      "faq": "常见问题",
+      "feedback": "反馈建议",
+      "gitter": "法律声明",
+      "links": "BB",
+      "repo": "商业合作",
+      "starter": "使用条款",
+      "theme": "XX有限公司"
+    },
+    "header": {
+      "about": "关于商汤",
+      "components": "产品服务",
+      "guide": "核心技术",
+      "join": "加入我们",
+      "resource": "新闻中心",
+      "theme": "客户案例"
+    },
+    "lang": "zh-CN",
+    "nav": {
+      "dropdown": "版本："
+    }
+  },
+  {
+    "demo-block": {
+      "button-text": "Try it!",
+      "hide-text": "Hide",
+      "show-text": "Expand",
+      "tooltip-text": "Run this demo on codepen.io"
+    },
+    "footer": {
+      "changelog": "Changelog",
+      "community": "Community",
+      "contribution": "Contribution",
+      "eleme": "Eleme",
+      "faq": "FAQ",
+      "feedback": "Feedback",
+      "gitter": "Gitter",
+      "links": "Links",
+      "repo": "GitHub",
+      "starter": "Starter kit",
+      "theme": "Online Theme Roller"
+    },
+    "header": {
+      "components": "Component",
+      "guide": "Guide",
+      "resource": "Resource",
+      "theme": "Theme"
+    },
+    "lang": "en-US",
+    "nav": {
+      "dropdown": "Version: "
+    }
+  }
+
+]

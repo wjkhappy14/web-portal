@@ -1,0 +1,14 @@
+{
+  "en-US": {
+    "component": "Component | Element",
+    "guide": "Guide | Element",
+    "home": "Element - A Desktop UI Toolkit for Web",
+    "resource": "Resource | Element"
+  },
+  "zh-CN": {
+    "component": "组件 | Element",
+    "guide": "指南 | Element",
+    "home": "我爱Vue",
+    "resource": "资源 | Element"
+  }
+}
