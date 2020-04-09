@@ -12,8 +12,6 @@ lib
 .idea
 .vscode
 examples/element-ui
-examples/pages/en-US
-examples/pages/zh-CN
 examples/pages/es
 examples/pages/fr-FR
 fe.element/element-ui
@@ -25,3 +23,5 @@ build/bin/algolia-key.js
 /.vs/element/v16
 *.sqlite
 *.json
+/.vs/web-portal/config
+/.vs/web-portal/v16/.suo
