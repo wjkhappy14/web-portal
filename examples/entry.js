@@ -1,9 +1,10 @@
 import Vue from 'vue';
-import entry from './app';
+import app from './app';
 import VueRouter from 'vue-router';
 import Element from 'main/index.js';
 import hljs from 'highlight.js';
 import routes from './route.config';
+import store from './store'
 import demoBlock from './components/demo-block';
 import MainFooter from './components/footer';
 import MainHeader from './components/header';
@@ -61,7 +62,9 @@ router.afterEach(route => {
 	document.title = 'Hello Element';
 });
 
-new Vue({ // eslint-disable-line
-	...entry,
+new Vue({
+	el: '#app',
+	...app,
+	store,
 	router
-}).$mount('#app');
+});

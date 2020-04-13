@@ -458,15 +458,26 @@
 </template>
 <script>
     import throttle from 'throttle-debounce/throttle';
+    import request from '../../utils/request'
     import { addClass, removeClass } from 'element-ui/src/utils/dom';
-    import { swiper, swiperSlide } from 'vue-awesome-swiper'
-
+    import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
+    import 'swiper/css/swiper.css'
     export default {
         components: {
-            swiper,
-            swiperSlide
+            Swiper,
+            SwiperSlide
         },
         created() {
+            request({
+                url: '/api/app/channelRouter',
+                method: 'get',
+                params: { id: 123 }
+            }).then(x => {
+
+
+
+            });
+
             this.throttledHandleScroll = throttle(10, true, index => {
                 this.handleScroll(index);
             });
@@ -507,7 +518,7 @@
                     centeredSlides: true,
                     spaceBetween: 10,
                     loop: true,
-                    speed: 600, 
+                    speed: 600,
                 }
             };
         },
