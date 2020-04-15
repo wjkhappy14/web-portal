@@ -382,7 +382,8 @@
             </div>
         </div>
         <div class="sponsors">
-
+            <router-view>
+            </router-view>
         </div>
         <div class="cards">
             <ul class="container">
