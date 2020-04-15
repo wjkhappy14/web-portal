@@ -355,24 +355,34 @@
     <div>
         <div class="banner">
             <div class="banner-desc">
-                <h1>Hello</h1>
-                <p>Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库</p>
+                <swiper :options="swiperOption">
+                    <swiper-slide>1</swiper-slide>
+                    <swiper-slide>2</swiper-slide>
+                    <swiper-slide>3</swiper-slide>
+                </swiper>
             </div>
         </div>
+        <el-card class="box-card">
+            <div v-for="item in items" :key="item.id" class="text item">
+                {{item.name}}
+            </div>
+        </el-card>
         <div class="jumbotron" ref="indexMainImg">
-            <img src="~examples/assets/images/lintsense/grid.jpg" alt="">
+            <el-image style="width: 100px; height: 100px"
+                      src="/assets/images/lintsense/grid.jpg"
+                      fit="fit">
+            </el-image>
             <div class="jumbotron-red" :style="{
            height: mainImgOffset + 'px'
          }">
-                <img src="~examples/assets/images/lintsense/screen.jpg" alt="">
+                <el-image style="width: 100px; height: 100px"
+                          src="/assets/images/lintsense/screen.jpg"
+                          fit="fit">
+                </el-image>
             </div>
         </div>
         <div class="sponsors">
-            <swiper :options="swiperOption">
-                <swiper-slide>1</swiper-slide>
-                <swiper-slide>1</swiper-slide>
-                <swiper-slide>1</swiper-slide>
-            </swiper>
+
         </div>
         <div class="cards">
             <ul class="container">
@@ -457,6 +467,8 @@
     </div>
 </template>
 <script>
+    import Element from 'main/index.js';
+    const { version } = Element;
     import throttle from 'throttle-debounce/throttle';
     import request from '../../utils/request'
     import { addClass, removeClass } from 'element-ui/src/utils/dom';
@@ -467,22 +479,58 @@
             Swiper,
             SwiperSlide
         },
+        beforeCreate() {
+
+
+        },
         created() {
-            request({
-                url: '/api/app/channelRouter',
-                method: 'get',
-                params: { id: 123 }
-            }).then(x => {
-
-
-
+            this.getItems().then(x => {
+                this.items = x.items;
             });
-
             this.throttledHandleScroll = throttle(10, true, index => {
                 this.handleScroll(index);
             });
+
+        },
+        beforeMount() {
+
+        },
+        mounted() {
+
+        },
+        beforeUpdate() {
+
+        },
+        updated() {
+
+        },
+        beforeDestroy() {
+
+        },
+        destroyed() {
+
+        },
+        activated() {
+
+        },
+        deactivated() {
+
+        },
+        errorCaptured() {
+
+        },
+        serverPrefetch() {
+
+
         },
         methods: {
+            getItems() {
+                return request({
+                    url: 'http://106.13.130.51:5000/api/blogging/blogs',
+                    method: 'get',
+                    params: { id: 123 }
+                });
+            },
             handleScroll(index) {
                 const ele = this.$refs.indexMainImg;
                 const rect = ele.getBoundingClientRect();
@@ -507,6 +555,8 @@
         },
         data() {
             return {
+                v: version,
+                items: [],
                 lang: this.$route.meta.lang,
                 mainImgOffset: 0,
                 showIntroA: false,
