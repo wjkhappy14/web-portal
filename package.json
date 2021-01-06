@@ -5,7 +5,7 @@
   "dependencies": {
     "animate.css": "^3.7.2",
     "async-validator": "~1.8.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.0",
     "crypto-js": "^4.0.0",
     "deepmerge": "^1.2.0",
